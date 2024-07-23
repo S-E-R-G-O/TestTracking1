@@ -5,7 +5,7 @@ from VideSettings import Processing
 
 detection = []  # Детектированные объекты
 tracking =[] # Отслеживаем объекты
-ob_det = Processing("RoadTraffic720.mp4") # Передаем видео и создаем его маску из VideSettings
+ob_det = Processing("3.Camera 2017-05-29 16-23-04_137 [3m3s].avi") # Передаем видео и создаем его маску из VideSettings
 
 while True:
     try:
@@ -21,6 +21,6 @@ while True:
     cv2.imshow("Tracking", frame)
     cv2.imshow("Mask", thresh)
 
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    if cv2.waitKey(20) & 0xFF == ord('q'):
         break
 cv2.destroyAllWindows()

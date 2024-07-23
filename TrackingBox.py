@@ -27,7 +27,7 @@ class Box:
         print(f"ID {self.id}: {self.x}, {self.y}, {self.w}, {self.h}")
 
 
-    #Условие при которых происходит отрисовка рамки во кргу объекта
+    #Условия при которых происходит отрисовка рамки во круг объекта
     @classmethod
     def det_area_create(cls, contour):
         detection = []
@@ -51,7 +51,7 @@ class Box:
 
 
 
-        #Выполняет перебора всех распознаных объектов (detection) и всех отслеживаемых объектов (tracking)
+        #Выполнение перебора всех распознаных объектов (detection) и всех отслеживаемых объектов (tracking)
         # и для каждой пары объектов вычисляется площадь пересечения их областей (Intersection over Union).
         for i, det in enumerate(detection):
             for j, tra in enumerate(tracking):
